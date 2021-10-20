@@ -1,13 +1,15 @@
 package org.wit.quiz.controllers
 
 import mu.KotlinLogging
+import org.wit.quiz.models.quizJSONStore
 import org.wit.quiz.models.quizMemStore
 import org.wit.quiz.models.quizModel
 import org.wit.quiz.views.quizView
 
 class quizController {
 
-    val quizzes = quizMemStore()
+    //val quizzes = quizMemStore()
+    val quizzes = quizJSONStore()
     val quizView = quizView()
     val logger = KotlinLogging.logger {}
 
