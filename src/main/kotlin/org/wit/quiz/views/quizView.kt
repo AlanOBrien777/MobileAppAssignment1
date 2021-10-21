@@ -14,9 +14,10 @@ class quizView {
         println("MAIN MENU")
         println(" 1. Create a Quiz")
         println(" 2. Edit a Quiz")
-        println(" 3. List All Quizzes")
-        println(" 4. Search Quizzes")
-        println(" 5. Delete Quiz")
+        println(" 3. Play A Random Quiz")
+        println(" 4. List All Quizzes")
+        println(" 5. Search Quizzes")
+        println(" 6. Delete Quiz")
         println(" 0. Exit")
         println()
         print("Enter Option : ")
@@ -53,42 +54,52 @@ class quizView {
         quiz.questionOne = readLine()!!
         print("Enter the Answer to Question 1 : ")
         quiz.answerOne = readLine()!!
+        quiz.answerOne = quiz.answerOne.toLowerCase()
         print("Enter Question 2 : ")
         quiz.questionTwo = readLine()!!
         print("Enter the Answer to Question 2 : ")
         quiz.answerTwo = readLine()!!
+        quiz.answerTwo = quiz.answerTwo.toLowerCase()
         print("Enter Question 3 : ")
         quiz.questionThree = readLine()!!
         print("Enter the Answer to Question 3 : ")
         quiz.answerThree = readLine()!!
+        quiz.answerThree = quiz.answerThree.toLowerCase()
         print("Enter Question 4 : ")
         quiz.questionFour = readLine()!!
         print("Enter the Answer to Question 4 : ")
         quiz.answerFour = readLine()!!
+        quiz.answerFour = quiz.answerFour.toLowerCase()
         print("Enter Question 5 : ")
         quiz.questionFive = readLine()!!
         print("Enter the answer to Question 5 : ")
         quiz.answerFive = readLine()!!
+        quiz.answerFive = quiz.answerFive.toLowerCase()
         print("Enter Question 6 : ")
         quiz.questionSix = readLine()!!
         print("Enter the Answer to Question 6 : ")
         quiz.answerSix = readLine()!!
+        quiz.answerSix = quiz.answerSix.toLowerCase()
         print("Enter Question 7 : ")
         quiz.questionSeven = readLine()!!
         print("Enter the Answer to Question 7 : ")
         quiz.answerSeven = readLine()!!
+        quiz.answerSeven = quiz.answerSeven.toLowerCase()
         print("Enter Question 8 : ")
         quiz.questionEight = readLine()!!
         print("Enter the Answer to Question 8 : ")
         quiz.answerEight = readLine()!!
+        quiz.answerEight = quiz.answerEight.toLowerCase()
         print("Enter Question 9 : ")
         quiz.questionNine = readLine()!!
         print("Enter the Answer to Question 9 : ")
         quiz.answerNine = readLine()!!
+        quiz.answerNine = quiz.answerNine.toLowerCase()
         print("Enter Question 10 : ")
         quiz.questionTen = readLine()!!
         print("Enter the answer to Question 10 : ")
         quiz.answerTen = readLine()!!
+        quiz.answerTen = quiz.answerTen.toLowerCase()
 
 
         return quiz.quizName.isNotEmpty() && quiz.quizGenre.isNotEmpty() && quiz.questionOne.isNotEmpty() && quiz.questionTwo.isNotEmpty() && quiz.questionThree.isNotEmpty() && quiz.questionFour.isNotEmpty() && quiz.questionFive.isNotEmpty() && quiz.questionSix.isNotEmpty() && quiz.questionSeven.isNotEmpty() && quiz.questionEight.isNotEmpty() && quiz.questionNine.isNotEmpty() && quiz.questionTen.isNotEmpty() && quiz.answerOne.isNotEmpty() && quiz.answerTwo.isNotEmpty() && quiz.answerThree.isNotEmpty() && quiz.answerFour.isNotEmpty() && quiz.answerFive.isNotEmpty() && quiz.answerSix.isNotEmpty() && quiz.answerSeven.isNotEmpty() && quiz.answerEight.isNotEmpty() && quiz.answerNine.isNotEmpty() && quiz.answerTen.isNotEmpty()
@@ -146,24 +157,34 @@ class quizView {
             tempQuestionTen = readLine()!!
             print("Enter a new Answer 1 instead of [ "  + quiz.answerOne + " ] : ")
             tempAnswerOne = readLine()!!
+            tempAnswerOne = tempAnswerOne.toLowerCase()
             print("Enter a new Answer 2 instead of [ "  + quiz.answerTwo + " ] : ")
             tempAnswerTwo = readLine()!!
+            tempAnswerTwo = tempAnswerTwo.toLowerCase()
             print("Enter a new Answer 3 instead of [ "  + quiz.answerThree + " ] : ")
             tempAnswerThree = readLine()!!
+            tempAnswerThree = tempAnswerThree.toLowerCase()
             print("Enter a new Answer 4 instead of [ "  + quiz.answerFour + " ] : ")
             tempAnswerFour = readLine()!!
+            tempAnswerFour = tempAnswerFour.toLowerCase()
             print("Enter a new Answer 5 instead of [ "  + quiz.answerFive + " ] : ")
             tempAnswerFive = readLine()!!
+            tempAnswerFive = tempAnswerFive.toLowerCase()
             print("Enter a new Answer 6 instead of [ "  + quiz.answerSix + " ] : ")
             tempAnswerSix = readLine()!!
+            tempAnswerSix = tempAnswerSix.toLowerCase()
             print("Enter a new Answer 7 instead of [ "  + quiz.answerSeven + " ] : ")
             tempAnswerSeven = readLine()!!
+            tempAnswerSeven = tempAnswerSeven.toLowerCase()
             print("Enter a new Answer 8 instead of [ "  + quiz.answerEight + " ] : ")
             tempAnswerEight = readLine()!!
+            tempAnswerEight = tempAnswerEight.toLowerCase()
             print("Enter a new Answer 9 instead of [ "  + quiz.answerNine + " ] : ")
             tempAnswerNine = readLine()!!
+            tempAnswerNine = tempAnswerNine.toLowerCase()
             print("Enter a new Answer 10 instead of [ "  + quiz.answerTen + " ] : ")
             tempAnswerTen = readLine()!!
+            tempAnswerTen = tempAnswerTen.toLowerCase()
 
             if (!tempQuizName.isNullOrEmpty() && !tempQuizGenre.isNullOrEmpty() && !tempQuestionOne.isNullOrEmpty() && !tempQuestionTwo.isNullOrEmpty() && !tempQuestionThree.isNullOrEmpty() && !tempQuestionFour.isNullOrEmpty() && !tempQuestionFive.isNullOrEmpty() && !tempQuestionSix.isNullOrEmpty() && !tempQuestionSeven.isNullOrEmpty() && !tempQuestionEight.isNullOrEmpty() && !tempQuestionNine.isNullOrEmpty() && !tempQuestionTen.isNullOrEmpty() && !tempAnswerOne.isNullOrEmpty() && !tempAnswerTwo.isNullOrEmpty() && !tempAnswerThree.isNullOrEmpty() && !tempAnswerFour.isNullOrEmpty() && !tempAnswerFive.isNullOrEmpty() && !tempAnswerSix.isNullOrEmpty() && !tempAnswerSeven.isNullOrEmpty() && !tempAnswerEight.isNullOrEmpty() && !tempAnswerNine.isNullOrEmpty() && !tempAnswerTen.isNullOrEmpty()) {
                 quiz.quizName = tempQuizName
