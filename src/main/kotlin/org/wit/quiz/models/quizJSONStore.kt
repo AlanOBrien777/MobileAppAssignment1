@@ -52,8 +52,30 @@ class quizJSONStore : quizStore {
     override fun update(quiz: quizModel) {
         var foundQuiz = findOne(quiz.id!!)
         if (foundQuiz != null) {
+
             foundQuiz.quizName = quiz.quizName
             foundQuiz.quizGenre = quiz.quizGenre
+            foundQuiz.questionOne = quiz.questionOne
+            foundQuiz.questionTwo = quiz.questionTwo
+            foundQuiz.questionThree = quiz.questionThree
+            foundQuiz.questionFour = quiz.questionFour
+            foundQuiz.questionFive = quiz.questionFive
+            foundQuiz.questionSix = quiz.questionSix
+            foundQuiz.questionSeven = quiz.questionSeven
+            foundQuiz.questionEight = quiz.questionEight
+            foundQuiz.questionNine = quiz.questionNine
+            foundQuiz.questionTen = quiz.questionTen
+
+            foundQuiz.answerOne = quiz.answerOne
+            foundQuiz.answerTwo = quiz.answerTwo
+            foundQuiz.answerThree = quiz.answerThree
+            foundQuiz.answerFour = quiz.answerFour
+            foundQuiz.answerFive = quiz.answerFive
+            foundQuiz.answerSix = quiz.answerSix
+            foundQuiz.answerSeven = quiz.answerSeven
+            foundQuiz.answerEight = quiz.answerEight
+            foundQuiz.answerNine = quiz.answerNine
+            foundQuiz.answerTen = quiz.answerTen
         }
         serialize()
     }
