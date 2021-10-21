@@ -5,6 +5,8 @@ import org.wit.quiz.models.quizJSONStore
 import org.wit.quiz.models.quizMemStore
 import org.wit.quiz.models.quizModel
 import org.wit.quiz.views.quizView
+import java.util.*
+import kotlin.random.Random.Default.nextInt
 
 class quizController {
 
@@ -50,6 +52,17 @@ class quizController {
 
     fun list() {
         quizView.listQuizzes(quizzes)
+    }
+
+
+    fun play(){
+        quizView.listQuizzes(quizzes)
+        val newId = Random().nextInt(10)
+        val aQuiz = search(newId.toLong())
+
+        if(aQuiz != null){
+            println("Question 1 : " + aQuiz.questionOne + " ")
+        }
     }
 
     fun update() {
