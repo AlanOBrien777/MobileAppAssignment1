@@ -28,9 +28,10 @@ class quizController {
             when (input) {
                 1 -> add()
                 2 -> update()
-                3 -> list()
-                4 -> search()
-                5 -> delete()
+                3 -> play()
+                4 -> list()
+                5 -> search()
+                6 -> delete()
                 0 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
@@ -56,13 +57,26 @@ class quizController {
 
 
     fun play(){
-        quizView.listQuizzes(quizzes)
         val newId = Random().nextInt(10)
         val aQuiz = search(newId.toLong())
 
+        var tempAnswerOne: String?
+        var tempAnswerTwo: String?
+        var tempAnswerThree: String?
+        var tempAnswerFour: String?
+        var tempAnswerFive: String?
+        var tempAnswerSix: String?
+        var tempAnswerSeven: String?
+        var tempAnswerEight: String?
+        var tempAnswerNine: String?
+        var tempAnswerTen: String?
+
         if(aQuiz != null){
             println("Question 1 : " + aQuiz.questionOne + " ")
+            tempAnswerOne = readLine()!!
         }
+        else
+            -9
     }
 
     fun update() {
