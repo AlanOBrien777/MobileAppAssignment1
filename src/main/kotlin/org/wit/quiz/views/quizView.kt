@@ -99,7 +99,7 @@ class quizView {
         var tempQuizName: String?
         var tempQuizGenre: String?
         var tempQuestionOne:String?
-        var tempQuestionTow:String?
+        var tempQuestionTwo:String?
         var tempQuestionThree:String?
         var tempQuestionFour:String?
         var tempQuestionFive:String?
@@ -124,10 +124,71 @@ class quizView {
             tempQuizName = readLine()!!
             print("Enter a new Quiz Genre for [ " + quiz.quizGenre + " ] : ")
             tempQuizGenre = readLine()!!
+            print("Enter a new Question 1 instead of [ "  + quiz.questionOne + " ] : ")
+            tempQuestionOne = readLine()!!
+            print("Enter a new Question 2 instead of [ "  + quiz.questionTwo + " ] : ")
+            tempQuestionTwo = readLine()!!
+            print("Enter a new Question 3 instead of [ "  + quiz.questionThree + " ] : ")
+            tempQuestionThree = readLine()!!
+            print("Enter a new Question 4 instead of [ "  + quiz.questionFour + " ] : ")
+            tempQuestionFour = readLine()!!
+            print("Enter a new Question 5 instead of [ "  + quiz.questionFive + " ] : ")
+            tempQuestionFive = readLine()!!
+            print("Enter a new Question 6 instead of [ "  + quiz.questionSix + " ] : ")
+            tempQuestionSix = readLine()!!
+            print("Enter a new Question 7 instead of [ "  + quiz.questionSeven + " ] : ")
+            tempQuestionSeven = readLine()!!
+            print("Enter a new Question 8 instead of [ "  + quiz.questionEight + " ] : ")
+            tempQuestionEight = readLine()!!
+            print("Enter a new Question 9 instead of [ "  + quiz.questionNine + " ] : ")
+            tempQuestionNine = readLine()!!
+            print("Enter a new Question 10 instead of [ "  + quiz.questionTen + " ] : ")
+            tempQuestionTen = readLine()!!
+            print("Enter a new Answer 1 instead of [ "  + quiz.answerOne + " ] : ")
+            tempAnswerOne = readLine()!!
+            print("Enter a new Answer 2 instead of [ "  + quiz.answerTwo + " ] : ")
+            tempAnswerTwo = readLine()!!
+            print("Enter a new Answer 3 instead of [ "  + quiz.answerThree + " ] : ")
+            tempAnswerThree = readLine()!!
+            print("Enter a new Answer 4 instead of [ "  + quiz.answerFour + " ] : ")
+            tempAnswerFour = readLine()!!
+            print("Enter a new Answer 5 instead of [ "  + quiz.answerFive + " ] : ")
+            tempAnswerFive = readLine()!!
+            print("Enter a new Answer 6 instead of [ "  + quiz.answerSix + " ] : ")
+            tempAnswerSix = readLine()!!
+            print("Enter a new Answer 7 instead of [ "  + quiz.answerSeven + " ] : ")
+            tempAnswerSeven = readLine()!!
+            print("Enter a new Answer 8 instead of [ "  + quiz.answerEight + " ] : ")
+            tempAnswerEight = readLine()!!
+            print("Enter a new Answer 9 instead of [ "  + quiz.answerNine + " ] : ")
+            tempAnswerNine = readLine()!!
+            print("Enter a new Answer 10 instead of [ "  + quiz.answerTen + " ] : ")
+            tempAnswerTen = readLine()!!
 
-            if (!tempQuizName.isNullOrEmpty() && !tempQuizGenre.isNullOrEmpty()) {
+            if (!tempQuizName.isNullOrEmpty() && !tempQuizGenre.isNullOrEmpty() && !tempQuestionOne.isNullOrEmpty() && !tempQuestionTwo.isNullOrEmpty() && !tempQuestionThree.isNullOrEmpty() && !tempQuestionFour.isNullOrEmpty() && !tempQuestionFive.isNullOrEmpty() && !tempQuestionSix.isNullOrEmpty() && !tempQuestionSeven.isNullOrEmpty() && !tempQuestionEight.isNullOrEmpty() && !tempQuestionNine.isNullOrEmpty() && !tempQuestionTen.isNullOrEmpty() && !tempAnswerOne.isNullOrEmpty() && !tempAnswerTwo.isNullOrEmpty() && !tempAnswerThree.isNullOrEmpty() && !tempAnswerFour.isNullOrEmpty() && !tempAnswerFive.isNullOrEmpty() && !tempAnswerSix.isNullOrEmpty() && !tempAnswerSeven.isNullOrEmpty() && !tempAnswerEight.isNullOrEmpty() && !tempAnswerNine.isNullOrEmpty() && !tempAnswerTen.isNullOrEmpty()) {
                 quiz.quizName = tempQuizName
                 quiz.quizGenre = tempQuizGenre
+                quiz.questionOne = tempQuestionOne
+                quiz.questionTwo = tempQuestionTwo
+                quiz.questionThree = tempQuestionThree
+                quiz.questionFour = tempQuestionFour
+                quiz.questionFive = tempQuestionFive
+                quiz.questionSix = tempQuestionSix
+                quiz.questionSeven = tempQuestionSeven
+                quiz.questionEight = tempQuestionEight
+                quiz.questionNine = tempQuestionNine
+                quiz.questionTen = tempQuestionTen
+
+                quiz.answerOne = tempAnswerOne
+                quiz.answerTwo = tempAnswerTwo
+                quiz.answerThree = tempAnswerThree
+                quiz.answerFour = tempAnswerFour
+                quiz.answerFive = tempAnswerFive
+                quiz.answerSix = tempAnswerSix
+                quiz.answerSeven = tempAnswerSeven
+                quiz.answerEight = tempAnswerEight
+                quiz.answerNine = tempAnswerNine
+                quiz.answerTen = tempAnswerTen
                 return true
             }
         }
