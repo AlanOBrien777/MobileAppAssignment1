@@ -28,7 +28,7 @@ class quizController {
                 2 -> update()
                 3 -> list()
                 4 -> search()
-                -99 -> dummyData()
+                5 -> delete()
                 0 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
@@ -71,6 +71,20 @@ class quizController {
             println("Quiz Not Updated...")
     }
 
+    fun delete() {
+        quizView.listQuizzes(quizzes)
+        var searchId = quizView.getId()
+        val aQuiz = search(searchId)
+
+        if(aQuiz != null) {
+            quizzes.delete(aQuiz)
+            println("Quiz Deleted...")
+            quizView.listQuizzes(quizzes)
+        }
+        else
+            println("Quiz Not Deleted...")
+    }
+
     fun search() {
         val aQuiz = search(quizView.getId())!!
         quizView.showQuiz(aQuiz)
@@ -82,9 +96,4 @@ class quizController {
         return foundQuiz
     }
 
-    fun dummyData() {
-        quizzes.create(quizModel(title = "New York New York", description = "So Good They Named It Twice"))
-        quizzes.create(quizModel(title= "Ring of Kerry", description = "Some place in the Kingdom"))
-        quizzes.create(quizModel(title = "Waterford City", description = "You get great Blaas Here!!"))
-    }
 }

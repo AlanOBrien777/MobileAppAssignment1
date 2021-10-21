@@ -31,12 +31,16 @@ class quizMemStore : quizStore {
     override fun update(quiz: quizModel) {
         var foundQuiz = findOne(quiz.id!!)
         if (foundQuiz != null) {
-            foundQuiz.title = quiz.title
-            foundQuiz.description = quiz.description
+            foundQuiz.quizName = quiz.quizName
+            foundQuiz.quizGenre = quiz.quizGenre
         }
     }
 
+    override fun delete(quiz: quizModel) {
+        quizzes.remove(quiz)
+    }
+
     internal fun logAll() {
-        quizzes.forEach { println("${it}") }
+        quizzes.forEach { logger.info("${it}") }
     }
 }

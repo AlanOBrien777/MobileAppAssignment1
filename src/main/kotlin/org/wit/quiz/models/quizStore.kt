@@ -5,4 +5,5 @@ interface quizStore {
     fun findOne(id: Long): quizModel?
     fun create(quiz: quizModel)
     fun update(quiz: quizModel)
+    fun delete(quiz: quizModel)
 }
