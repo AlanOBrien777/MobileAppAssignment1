@@ -55,9 +55,10 @@ class quizController {
         quizView.listQuizzes(quizzes)
     }
 
+    var quizScore: Int = 0
 
     fun play(){
-        val newId = Random().nextInt(10)
+        val newId = Random().nextInt(quizzes.quizzes.size)
         val aQuiz = search(newId.toLong())
 
         var tempAnswerOne: String?
@@ -73,10 +74,122 @@ class quizController {
 
         if(aQuiz != null){
             println("Question 1 : " + aQuiz.questionOne + " ")
-            tempAnswerOne = readLine()!!
+            print("Answer 1 : ")
+            tempAnswerOne =""+ readLine()!!
+
+            println("Question 2 : " + aQuiz.questionTwo + " ")
+            print("Answer 2 : ")
+            tempAnswerTwo =""+ readLine()!!
+
+            println("Question 3 : " + aQuiz.questionThree + " ")
+            print("Answer 3 : ")
+            tempAnswerThree =""+ readLine()!!
+
+            println("Question 4 : " + aQuiz.questionFour + " ")
+            print("Answer 4 : ")
+            tempAnswerFour =""+ readLine()!!
+
+            println("Question 5 : " + aQuiz.questionFive + " ")
+            print("Answer 5 : ")
+            tempAnswerFive =""+ readLine()!!
+
+            println("Question 6 : " + aQuiz.questionSix + " ")
+            print("Answer 6 : ")
+            tempAnswerSix =""+ readLine()!!
+
+            println("Question 7 : " + aQuiz.questionSeven + " ")
+            print("Answer 7 : ")
+            tempAnswerSeven =""+ readLine()!!
+
+            println("Question 8 : " + aQuiz.questionEight + " ")
+            print("Answer 8 : ")
+            tempAnswerEight =""+ readLine()!!
+
+            println("Question 9 : " + aQuiz.questionNine + " ")
+            print("Answer 9 : ")
+            tempAnswerNine =""+ readLine()!!
+
+            println("Question 10 : " + aQuiz.questionTen + " ")
+            print("Answer 10 : ")
+            tempAnswerTen = ""+ readLine()!!
+
+            tempAnswerOne = tempAnswerOne.toLowerCase()
+            tempAnswerTwo = tempAnswerTwo.toLowerCase()
+            tempAnswerThree = tempAnswerThree.toLowerCase()
+            tempAnswerFour = tempAnswerFour.toLowerCase()
+            tempAnswerFive = tempAnswerFive.toLowerCase()
+            tempAnswerSix = tempAnswerSix.toLowerCase()
+            tempAnswerSeven = tempAnswerSeven.toLowerCase()
+            tempAnswerEight = tempAnswerEight.toLowerCase()
+            tempAnswerNine = tempAnswerNine.toLowerCase()
+            tempAnswerTen = tempAnswerTen.toLowerCase()
+
+
+            if(tempAnswerOne != null && tempAnswerTwo != null && tempAnswerThree !=null && tempAnswerFour !=null && tempAnswerFive !=null && tempAnswerSix !=null && tempAnswerSeven !=null && tempAnswerEight !=null && tempAnswerNine !=null && tempAnswerTen !=null ){
+                if(tempAnswerOne == aQuiz.answerOne){
+                    quizScore++
+                }
+                if(tempAnswerTwo == aQuiz.answerTwo){
+                    quizScore++
+                }
+                if(tempAnswerThree == aQuiz.answerThree){
+                    quizScore++
+                }
+                if(tempAnswerFour == aQuiz.answerFour){
+                    quizScore++
+                }
+                if(tempAnswerFive == aQuiz.answerFive){
+                    quizScore++
+                }
+                if(tempAnswerSix == aQuiz.answerFive){
+                    quizScore++
+                }
+                if(tempAnswerSeven == aQuiz.answerSeven){
+                    quizScore++
+                }
+                if(tempAnswerEight == aQuiz.answerEight){
+                    quizScore++
+                }
+                if(tempAnswerNine == aQuiz.answerNine){
+                    quizScore++
+                }
+                if(tempAnswerTen == aQuiz.answerTen){
+                    quizScore++
+                }
+            }
+            else{
+                print("You entered an Invalid Answer Type")
+            }
+
         }
-        else
-            -9
+        else{
+            println("Could not find a quiz")
+        }
+
+        println("Your Score is : $quizScore ")
+
+        quizScore = 0
+
+        print("Question 1 : " + aQuiz?.questionOne + " ")
+        print("Answer 1 : " + aQuiz?.answerOne + " ")
+        print("Question 2 : " + aQuiz?.questionTwo + " ")
+        print("Answer 2 : " + aQuiz?.answerTwo + " ")
+        print("Question 3 : " + aQuiz?.questionThree + " ")
+        print("Answer 3 : " + aQuiz?.answerThree + " ")
+        print("Question 4 : " + aQuiz?.questionFour + " ")
+        print("Answer 4 : " + aQuiz?.answerFour + " ")
+        print("Question 5 : aQuiz?.questionFive)
+        print("Question 5 : aQuiz?.answerFive)
+        print("Answer 5 : aQuiz?.questionSix)
+        print("Question 6 : aQuiz?.answerSix)
+        print("Answer 6 : aQuiz?.questionSeven)
+        print("Question 7 : aQuiz?.answerSeven)
+        print("Answer 7 : aQuiz?.questionEight)
+        print("Question 8 : aQuiz?.answerEight)
+        print("Answer 8 : aQuiz?.questionNine)
+        print("Question 9 : aQuiz?.answerNine)
+        print("AnsweraQuiz?.questionTen)
+        print("aQuiz?.answerTen)
     }
 
     fun update() {
