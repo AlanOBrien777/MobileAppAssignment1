@@ -14,6 +14,8 @@ class quizController {
     val quizzes = quizJSONStore()
     val quizView = quizView()
     val logger = KotlinLogging.logger {}
+    val red = "\u001b[31m"
+    val reset = "\u001b[0m"
 
     init {
         logger.info { "Launching Quiz Console App" }
@@ -73,43 +75,43 @@ class quizController {
         var tempAnswerTen: String?
 
         if(aQuiz != null){
-            println("Question 1 : " + aQuiz.questionOne + " ")
+            println(red + "Question 1 : " + aQuiz.questionOne + " " + reset)
             print("Answer 1 : ")
             tempAnswerOne =""+ readLine()!!
 
-            println("Question 2 : " + aQuiz.questionTwo + " ")
+            println(red + "Question 2 : " + aQuiz.questionTwo + " " + reset)
             print("Answer 2 : ")
             tempAnswerTwo =""+ readLine()!!
 
-            println("Question 3 : " + aQuiz.questionThree + " ")
+            println(red + "Question 3 : " + aQuiz.questionThree + " " + reset)
             print("Answer 3 : ")
             tempAnswerThree =""+ readLine()!!
 
-            println("Question 4 : " + aQuiz.questionFour + " ")
+            println(red + "Question 4 : " + aQuiz.questionFour + " " + reset)
             print("Answer 4 : ")
             tempAnswerFour =""+ readLine()!!
 
-            println("Question 5 : " + aQuiz.questionFive + " ")
+            println(red + "Question 5 : " + aQuiz.questionFive + " " + reset)
             print("Answer 5 : ")
             tempAnswerFive =""+ readLine()!!
 
-            println("Question 6 : " + aQuiz.questionSix + " ")
+            println(red + "Question 6 : " + aQuiz.questionSix + " " + reset)
             print("Answer 6 : ")
             tempAnswerSix =""+ readLine()!!
 
-            println("Question 7 : " + aQuiz.questionSeven + " ")
+            println(red + "Question 7 : " + aQuiz.questionSeven + " " + reset)
             print("Answer 7 : ")
             tempAnswerSeven =""+ readLine()!!
 
-            println("Question 8 : " + aQuiz.questionEight + " ")
+            println(red + "Question 8 : " + aQuiz.questionEight + " " + reset)
             print("Answer 8 : ")
             tempAnswerEight =""+ readLine()!!
 
-            println("Question 9 : " + aQuiz.questionNine + " ")
+            println(red + "Question 9 : " + aQuiz.questionNine + " " + reset)
             print("Answer 9 : ")
             tempAnswerNine =""+ readLine()!!
 
-            println("Question 10 : " + aQuiz.questionTen + " ")
+            println(red + "Question 10 : " + aQuiz.questionTen + " " + reset)
             print("Answer 10 : ")
             tempAnswerTen = ""+ readLine()!!
 
@@ -166,11 +168,7 @@ class quizController {
             println("Could not find a quiz")
         }
 
-        println("Your Score is : $quizScore ")
-
-        quizScore = 0
-
-        println("Question 1 : " + aQuiz?.questionOne + " ")
+        println("\nQuestion 1 : " + aQuiz?.questionOne + " ")
         println("Answer 1 : " + aQuiz?.answerOne + " ")
         println("Question 2 : " + aQuiz?.questionTwo + " ")
         println("Answer 2 : " + aQuiz?.answerTwo + " ")
@@ -190,6 +188,10 @@ class quizController {
         println("Answer 9 : " + aQuiz?.answerNine + " ")
         println("Question 10 : " + aQuiz?.questionTen + " ")
         println("Answer 10 : " + aQuiz?.answerTen + " ")
+
+        println("\nYour Score is : $quizScore ")
+
+        quizScore = 0
     }
 
     fun update() {
