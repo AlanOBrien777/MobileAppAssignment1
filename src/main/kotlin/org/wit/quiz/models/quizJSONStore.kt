@@ -45,7 +45,10 @@ class quizJSONStore : quizStore {
 
     override fun create(quiz: quizModel) {
         if(quizzes.size > 0){
-            lastId = quizzes[quizzes.size].id
+            lastId = (quizzes.size).toLong()
+        }
+        else{
+            lastId = 0
         }
         quiz.id = lastId++
         quizzes.add(quiz)
