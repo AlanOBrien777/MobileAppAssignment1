@@ -42,8 +42,11 @@ class quizJSONStore : quizStore {
         var foundQuiz: quizModel? = quizzes.find { p -> p.id == id }
         return foundQuiz
     }
-    var lastId = 0L
+
     override fun create(quiz: quizModel) {
+        if(quizzes.size > 0){
+            lastId = quizzes[quizzes.size].id
+        }
         quiz.id = lastId++
         quizzes.add(quiz)
         serialize()
